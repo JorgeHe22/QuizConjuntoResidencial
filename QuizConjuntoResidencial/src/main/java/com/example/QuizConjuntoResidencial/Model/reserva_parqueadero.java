@@ -1,5 +1,6 @@
 package com.example.QuizConjuntoResidencial.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
@@ -20,6 +21,7 @@ public class reserva_parqueadero {
 
     @ManyToOne
     @JoinColumn(name = "id_propietario")
+    @JsonIgnore
     private Propietario propietario;
 
     // Getters y Setters
